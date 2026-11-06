@@ -1,0 +1,30 @@
+{
+  "geode": "4.0.0",
+  "gd": { "win": "2.2074", "android": "2.2074", "mac": "2.2074", "ios": "2.2074" },
+  "version": "v1.0.0",
+  "id": "tuusuario.perfect-click-assistant",
+  "name": "Perfect Click Assistant",
+  "developer": "tuusuario",
+  "description": "Predice los clics necesarios, los muestra en un overlay y puede ejecutarlos automáticamente.",
+  "settings": {
+    "enabled":         { "type": "bool", "name": "Enable Mod", "default": true },
+    "auto-click":      { "type": "bool", "name": "Auto Click (modo automático)", "description": "Si está desactivado el mod funciona en modo manual: solo muestra ayudas.", "default": false },
+    "smart-detection": { "type": "bool", "name": "Smart Click Detection", "default": true },
+    "show-taps":       { "type": "bool", "name": "Show Taps", "default": true },
+    "show-predicted":  { "type": "bool", "name": "Show Predicted Taps", "default": true },
+    "tap-animation":   { "type": "bool", "name": "Tap Animation", "default": true },
+    "click-counter":   { "type": "bool", "name": "Click Counter", "default": true },
+    "safe-mode":       { "type": "bool", "name": "No guardar progreso con el bot", "description": "Marca la partida como test cuando el bot ha hecho clics, para no enviar progreso/récords.", "default": true },
+    "overlay-position": {
+      "type": "string", "name": "Overlay Position", "default": "Top Center",
+      "one-of": ["Top Center", "Bottom Center", "Top Left", "Top Right", "Bottom Left", "Bottom Right"]
+    },
+    "overlay-opacity": {
+      "type": "float", "name": "Overlay Opacity", "default": 0.9, "min": 0.1, "max": 1.0,
+      "control": { "slider": true }
+    },
+    "color-press":     { "type": "rgb", "name": "Tap color (pulsar)", "default": [0, 255, 120] },
+    "color-release":   { "type": "rgb", "name": "Tap color (soltar)", "default": [255, 80, 80] },
+    "color-predicted": { "type": "rgb", "name": "Predicted tap color", "default": [80, 170, 255] }
+  }
+}
